@@ -1,8 +1,9 @@
 <script>
 import { Line, mixins } from "vue-chartjs";
+const { reactiveProp } = mixins;
 
 export default {
-  mixins: [mixins.reactiveData],
+  mixins: [reactiveProp],
   extends: Line,
   props: {
     chartdata: {
@@ -16,6 +17,11 @@ export default {
   },
   mounted() {
     this.renderChart(this.chartdata, this.options);
+  },
+  watch: {
+    chartData() {
+      this.renderChart(this.chartData, this.options);
+    },
   },
 };
 </script>

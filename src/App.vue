@@ -1,11 +1,5 @@
 <template>
   <v-app id="app">
-    <div id="nav">
-      <v-toolbar color="#dfe6e9" dense flat>
-        <router-link to="/">Weather Map</router-link> |
-        <router-link to="/about">Temperature Chart</router-link>
-      </v-toolbar>
-    </div>
     <router-view />
   </v-app>
 </template>
