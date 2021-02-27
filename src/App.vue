@@ -1,11 +1,13 @@
 <template>
-  <div id="app">
+  <v-app id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <v-toolbar color="#dfe6e9" dense flat>
+        <router-link to="/">Weather Map</router-link> |
+        <router-link to="/about">Temperature Chart</router-link>
+      </v-toolbar>
     </div>
-    <router-view/>
-  </div>
+    <router-view />
+  </v-app>
 </template>
 
 <style>
@@ -18,7 +20,7 @@
 }
 
 #nav {
-  padding: 30px;
+  padding-bottom: 30px;
 }
 
 #nav a {
